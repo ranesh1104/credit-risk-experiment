@@ -1,0 +1,230 @@
+{
+  "model_version": {
+    "run_id": "local",
+    "trained_at_utc": "2026-04-03T01:43:53.671853+00:00",
+    "python_version": "3.10.9",
+    "data_hash_md5": "5e55b554836a",
+    "data_path": "../data/credit_risk_data_enhanced.csv",
+    "feature_version": "v23f",
+    "hpo_trials": 50
+  },
+  "champion": "lightgbm",
+  "optimal_threshold": 0.2,
+  "models": {
+    "logistic_regression": {
+      "n": 9984,
+      "default_rate": 0.022736378205128204,
+      "auc_roc": 0.6597172525858539,
+      "auc_pr": 0.03828163080980965,
+      "ks": 0.2516327371876692,
+      "brier": 0.022374502160448742,
+      "train_auc_roc": 0.6831984492652864,
+      "overfit_gap": 0.023481196679432492
+    },
+    "lightgbm": {
+      "n": 9984,
+      "default_rate": 0.022736378205128204,
+      "auc_roc": 0.6825536754590288,
+      "auc_pr": 0.03796732506090758,
+      "ks": 0.29290932659213603,
+      "brier": 0.02269564539597945,
+      "train_auc_roc": 0.7379847518942295,
+      "overfit_gap": 0.05543107643520073
+    },
+    "xgboost": {
+      "n": 9984,
+      "default_rate": 0.022736378205128204,
+      "auc_roc": 0.6752682700638738,
+      "auc_pr": 0.03849461159339015,
+      "ks": 0.24987775635159037,
+      "brier": 0.022596235868483888,
+      "train_auc_roc": 0.7171736504719372,
+      "overfit_gap": 0.04190538040806335
+    }
+  },
+  "vintage_stability": [
+    {
+      "vintage": 202401,
+      "n": 1088,
+      "defaults": 24,
+      "default_rate": 0.022058823529411766,
+      "auc_roc": 0.7185541979949874,
+      "ks": 0.343671679197995
+    },
+    {
+      "vintage": 202402,
+      "n": 1132,
+      "defaults": 20,
+      "default_rate": 0.0176678445229682,
+      "auc_roc": 0.633363309352518,
+      "ks": 0.28399280575539576
+    },
+    {
+      "vintage": 202403,
+      "n": 1140,
+      "defaults": 26,
+      "default_rate": 0.02280701754385965,
+      "auc_roc": 0.7185989504212126,
+      "ks": 0.37577682640519267
+    },
+    {
+      "vintage": 202404,
+      "n": 1090,
+      "defaults": 28,
+      "default_rate": 0.025688073394495414,
+      "auc_roc": 0.6741659940812483,
+      "ks": 0.30353779930051117
+    },
+    {
+      "vintage": 202405,
+      "n": 1117,
+      "defaults": 23,
+      "default_rate": 0.020590868397493287,
+      "auc_roc": 0.6704157062236706,
+      "ks": 0.27112312216834905
+    },
+    {
+      "vintage": 202406,
+      "n": 1127,
+      "defaults": 18,
+      "default_rate": 0.015971606033717833,
+      "auc_roc": 0.6885833082857429,
+      "ks": 0.27547339945897203
+    },
+    {
+      "vintage": 202407,
+      "n": 1029,
+      "defaults": 24,
+      "default_rate": 0.023323615160349854,
+      "auc_roc": 0.6807421227197347,
+      "ks": 0.3577114427860697
+    },
+    {
+      "vintage": 202408,
+      "n": 1143,
+      "defaults": 27,
+      "default_rate": 0.023622047244094488,
+      "auc_roc": 0.6755940528341962,
+      "ks": 0.3219832735961768
+    },
+    {
+      "vintage": 202409,
+      "n": 1118,
+      "defaults": 37,
+      "default_rate": 0.03309481216457961,
+      "auc_roc": 0.682613696027202,
+      "ks": 0.29897242293171994
+    }
+  ],
+  "monotone_report": [
+    {
+      "feature": "fico_score",
+      "constraint": "-1",
+      "p_low": 0.6581,
+      "p_high": 0.3689,
+      "passes": true
+    },
+    {
+      "feature": "income",
+      "constraint": "-1",
+      "p_low": 0.5128,
+      "p_high": 0.3559,
+      "passes": true
+    },
+    {
+      "feature": "debt_to_income",
+      "constraint": "+1",
+      "p_low": 0.3439,
+      "p_high": 0.7176,
+      "passes": true
+    },
+    {
+      "feature": "utilization_rate",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.6334,
+      "passes": true
+    },
+    {
+      "feature": "inquiries_last_6m",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.4479,
+      "passes": true
+    },
+    {
+      "feature": "term",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.3815,
+      "passes": true
+    },
+    {
+      "feature": "apr",
+      "constraint": "+1",
+      "p_low": 0.3718,
+      "p_high": 0.3937,
+      "passes": true
+    },
+    {
+      "feature": "employment_length",
+      "constraint": "-1",
+      "p_low": 0.3815,
+      "p_high": 0.3815,
+      "passes": true
+    },
+    {
+      "feature": "loan_to_income",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.3815,
+      "passes": true
+    },
+    {
+      "feature": "monthly_payment_burden",
+      "constraint": "+1",
+      "p_low": 0.3785,
+      "p_high": 0.4231,
+      "passes": true
+    },
+    {
+      "feature": "fico_tier",
+      "constraint": "-1",
+      "p_low": 0.5509,
+      "p_high": 0.3815,
+      "passes": true
+    },
+    {
+      "feature": "high_utilization",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.3815,
+      "passes": true
+    },
+    {
+      "feature": "high_inquiries",
+      "constraint": "+1",
+      "p_low": 0.3815,
+      "p_high": 0.3815,
+      "passes": true
+    }
+  ],
+  "feature_importance_top10": {
+    "debt_to_income": 27,
+    "fico_score": 17,
+    "utilization_rate": 16,
+    "income": 15,
+    "loan_amount": 15,
+    "age": 13,
+    "apr": 12,
+    "monthly_payment_burden": 12,
+    "income_missing": 10,
+    "inquiries_last_6m_missing": 8
+  },
+  "split_config": {
+    "train_vintage_end": 202209,
+    "cal_vintage_start": 202210,
+    "cal_vintage_end": 202212,
+    "test_vintage_start": 202401
+  }
+}
