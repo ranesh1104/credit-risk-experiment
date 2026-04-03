@@ -15,21 +15,14 @@ lightgbm>=4.0.0
 catboost>=1.2.0
 imbalanced-learn>=0.11.0
 
-# Model Interpretation
+optuna>=3.0.0
 shap>=0.42.0
-
-# Jupyter
+numba>=0.57.0
 jupyter>=1.0.0
 jupyterlab>=4.0.0
 ipywidgets>=8.0.0
-
-# Workflow Orchestration (for bonus section)
 metaflow>=2.10.0
-
-# Utilities
 python-dateutil>=2.8.0
 tqdm>=4.65.0
-
-# Testing (optional)
 pytest>=7.4.0
 pytest-cov>=4.1.0

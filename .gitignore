@@ -3,12 +3,12 @@
 venv/
 .env/
 .env.local/
-__pycache__/
-.metaflow/
-.metaflow_card_cache/
-.src/__pycache__
 *.py[cod]
 *.pyo
 *.pyd
 .ipynb_checkpoints/
 .DS_store
+**/.metaflow_card_cache/
+**/metaflow_card_cache/
+**/.metaflow/
+**/__pycache__/
